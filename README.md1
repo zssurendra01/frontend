@@ -1,0 +1,40 @@
+# Frontend
+
+To install nginx 
+
+    # apt update 
+    # apt install nginx -y
+    # apt install npm -y 
+    
+    
+Clone the Repo from Git 
+
+
+    # cd /var/www/html
+    # mkdir todo 
+    # cd todo
+    # git clone  https://github.com/surendradzelar/frontend.git
+    # cd frontend
+    
+    # npm install shelljs
+Now the code is here and we need to build the code using npm
+
+
+    # npm run build 
+    
+
+After the Build is complete we can find " dist " folder from build.
+Now configure the nginx
+
+
+    # vim /etc/nginx/sites-available/default
+    
+change the Path from 
+    
+    root  /var/www/html;   to   root /var/www/html/todo/frontend/dist;
+    
+    
+ Load Nginx service
+    
+      # systemctl restart nginx
+      # systemctl enable nginx
