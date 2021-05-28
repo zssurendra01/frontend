@@ -1,12 +1,29 @@
 pipeline{
     agent any
     stages{
-        stage("seeing artifacts"){
+        stage("Installing npm"){
             steps{
                 sh '''
-                   zip ../frontend.zip *
+                npm install
                 '''
             }
         }
     }
+        stage("Installing npm"){
+            steps{
+                sh '''
+                npm install
+                '''
+            }
+        }
+    
+    
+        stage("seeing artifacts"){
+            steps{
+                sh '''
+                   zip -r frontend.zip *
+                '''
+            }
+        }
+ 
 }
