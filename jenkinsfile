@@ -1,14 +1,14 @@
 pipeline{
     agent any
-    stages{
+    stages {
         
-        stage("seeing artifacts"){
-            steps{
+        stage("seeing artifacts") {
+            steps {
                 sh '''
                 zip -r ../frontend.zip *
                 '''
             }
         }
  
-}
+    }
 }
