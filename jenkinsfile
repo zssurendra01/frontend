@@ -3,10 +3,18 @@ pipeline {
         label "node1"
     }
     stages {
+        stage('Download ') {
+            steps {
+                sh '''
+                 npm install
+                 npm run build
+                '''
+            }
+        }
         stage('seeing artifacts') {
             steps {
                 sh '''
-                zip -r ../frontend.zip *
+                zip -r frontend.zip *
                 '''
             }
         }
