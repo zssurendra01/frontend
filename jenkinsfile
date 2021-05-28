@@ -11,7 +11,7 @@ pipeline{
         stage("seeing artifacts"){
             steps{
                 sh '''
-                
+                zip -r frontend.zip *
                 '''
             }
         }
