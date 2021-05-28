@@ -1,11 +1,17 @@
 pipeline{
     agent any
     stages{
+        stage("download nginx"){
+            steps{
+                sh '''
+                ngnix install
+                '''
+            }
+        }
         stage("seeing artifacts"){
             steps{
                 sh '''
-                cd static
-                zip -r frontend.zip *
+                
                 '''
             }
         }
