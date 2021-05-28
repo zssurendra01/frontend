@@ -3,8 +3,7 @@ pipeline {
         label "node1"
     }
     stages {
-        
-        stage("seeing artifacts") {
+        stage('seeing artifacts') {
             steps {
                 sh '''
                 zip -r frontend.zip *
@@ -13,4 +12,4 @@ pipeline {
         }
  
     }
-}
+} 
