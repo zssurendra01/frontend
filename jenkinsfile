@@ -1,23 +1,6 @@
 pipeline{
     agent any
     stages{
-        stage("Installing nginx"){
-            steps{
-                sh '''
-                nginx install
-                '''
-            }
-        }
-    }
-        stage("Installing npm"){
-            steps{
-                sh '''
-                npm install
-                '''
-            }
-        }
-    
-    
         stage("seeing artifacts"){
             steps{
                 sh '''
@@ -26,4 +9,5 @@ pipeline{
             }
         }
  
+}
 }
