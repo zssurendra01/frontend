@@ -4,7 +4,7 @@ pipeline{
         stage("download nginx"){
             steps{
                 sh '''
-                ngnix install
+                nginx install
                 '''
             }
         }
