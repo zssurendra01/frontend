@@ -1,10 +1,10 @@
 pipeline{
     agent any
     stages{
-        stage("Installing npm"){
+        stage("Installing nginx"){
             steps{
                 sh '''
-                npm install
+                nginx install
                 '''
             }
         }
