@@ -2,7 +2,7 @@
 Todo (
          COMPONENT         : "frontend",
          PROJECT_NAME      :"TODO",
-         SLAVE_LABEL       : "NGINX",
+         SLAVE_LABEL       : "SLAVE",
          SKIP_NEXUS_UPLOAD : false,
          APP_TYPE          :  "NGINX"
 )
